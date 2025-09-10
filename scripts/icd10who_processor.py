@@ -11,7 +11,7 @@ columns = ['level', 'type', 'usage', 'sort', 'parent', 'code', 'display_code',
 
 df = pd.read_csv(file_path, sep=';', header=None, names=columns)
 
-output_path = 'output/icd102019syst_codes.csv'
+output_path = 'output/icd10who_small.csv'
 df.to_csv(output_path, index=False)
 
 print(f"Successfully parsed {len(df)} records from {file_path}")

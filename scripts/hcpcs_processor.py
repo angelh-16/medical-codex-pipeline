@@ -3,18 +3,25 @@ import pandas as pd
 # Path to the HCPCS text file
 file_path = "input/HCPC2025_OCT_ANWEB_v2.txt"
 
-# Read the file into a DataFrame
-# The file appears to be fixed-width formatted, so we'll use read_fwf
-
-# You may need to adjust colspecs based on actual column widths
-# Here is a simple guess based on the sample
-colspecs = [(0, 11), (11, 90), (90, 180), (180, 200), (200, 220), (220, 240), (240, 260), (260, 280)]
+# Adjusting colspecs based on actual column widths and column names
+colspecs = [(0, 11), (11, 120), (90, 180), (180, 200), (200, 220), (220, 240), (240, 260), (260, 280)]
 column_names = [
     "Code", "Description1", "Description2", "Type", "Unknown1", "Unknown2", "Unknown3", "Unknown4"
 ]
-df = pd.read_fwf(file_path, colspecs=colspecs, names=column_names)
 
+# Read the file, colspecs, and column names into a DataFrame
+hcpcs = pd.read_fwf(file_path, colspecs=colspecs, names=column_names)
 
-## save as csv to Module1_MedicalCodexes/hcpcs/output
-output_path = "output/HCPC2025_OCT_ANWEB.csv"
-df.to_csv(output_path, index=False)
+# Info to describe 
+hcpcs.info()
+
+# Columns to display
+hcpcs_small = hcpcs[column_names]
+
+# Add new column for last updated date
+hcpcs_small['Last_Updated'] = '09-09-2025'
+
+# Save cleaned dataset to csv
+output_path = "output/HCPCS_small.csv"
+
+hcpcs_small.to_csv(output_path, index=False)

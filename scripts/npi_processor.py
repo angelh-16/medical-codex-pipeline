@@ -47,7 +47,7 @@ df_polars_small = df_polars_small.rename({
 })
 
 
-## save to csv
-output_path = 'Module1_MedicalCodexes/npi/output/npi_small.csv'
+# save to csv
+output_path = 'output/npi_small.csv'
 df_polars_small.write_csv(output_path)
-df_polars_small.write_parquet('Module1_MedicalCodexes/npi/output/npi_small.parquet')
+df_polars_small.write_parquet('output/npi_small.parquet')

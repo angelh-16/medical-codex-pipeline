@@ -43,5 +43,5 @@ with open(file_path, 'r', encoding='utf-8') as file:
 icdcodes = pd.DataFrame(codes)
 
 ## Save the DataFrame to a CSV file
-icdcodes.to_csv("Module1_MedicalCodexes/icd/output/icd10cm_order_2025.csv", index=False)
+icdcodes.to_csv("output/icd10cm_small.csv", index=False)
 
