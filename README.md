@@ -12,8 +12,8 @@ Create Python scripts that can process each medical codex listed below into stan
 Target Medical Codexe:
 SNOMED CT (US) - Clinical terminology \
 ICD-10-CM (US) - Diagnosis codes \
-ICD-10 (WHO) - International diagnosis codes \ 
+ICD-10 (WHO) - International diagnosis codes \
 HCPCS (US) - Healthcare procedure codes \
 LOINC (US) - Laboratory test codes \
 RxNorm (US) - Medication codes \
-NPI (US) - Healthcare provider identifiers \
+NPI (US) - Healthcare provider identifiers
