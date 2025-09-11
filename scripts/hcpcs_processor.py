@@ -1,5 +1,8 @@
 import pandas as pd
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 # Path to the HCPCS text file
 file_path = "input/HCPC2025_OCT_ANWEB_v2.txt"
 
@@ -22,6 +25,4 @@ hcpcs_small = hcpcs[column_names]
 hcpcs_small['Last_Updated'] = '09-09-2025'
 
 # Save cleaned dataset to csv
-output_path = "output/csv/hcpcs_small.csv"
-
-hcpcs_small.to_csv(output_path, index=False)
+save_to_formats(hcpcs_small, 'hcpcs_small')

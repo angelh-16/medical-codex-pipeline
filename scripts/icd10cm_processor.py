@@ -1,6 +1,9 @@
 import pandas as pd 
 import re
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 # Path to the HCPCS text file
 file_path= 'input/icd10cm_order_2025.txt'
 
@@ -47,15 +50,14 @@ list_cols = ['order_num', 'description_detailed']
 icdcodes_small = icdcodes[list_cols]
 
 # Add last updated columnn
-icdcodes_small['Last_Updated'] = '09-10-2025'
+icdcodes_small['last_updated'] = '09-10-2025'
 
 # Rename columns
 icdcodes_small = icdcodes_small.rename(columns={
     'order_num': 'Order Number',
     'description_detailed': 'Description',
-    'Last_Updated': 'Last_Updated'
+    'last_updated': 'Last Updated'
 })
 
 # Save cleaned dataset to csv
-output_path = "output/csv/icd10cm_small.csv"
-icdcodes.to_csv(output_path, index=False)
+save_to_formats(icdcodes_small, 'icdcodes_small')

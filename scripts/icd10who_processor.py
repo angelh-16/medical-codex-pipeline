@@ -1,5 +1,8 @@
 import pandas as pd
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 file_path = 'input/icd102019syst_codes.txt'
 
 columns = ['level', 'type', 'usage', 'sort', 'parent', 'code', 'display_code', 
@@ -8,8 +11,7 @@ columns = ['level', 'type', 'usage', 'sort', 'parent', 'code', 'display_code',
            'morbidity_code3', 'morbidity_code4']
 
 icd10who = pd.read_csv(file_path, sep=';', header=None, names=columns)
-print(icd10who)
-print(icd10who.columns)
+
 # Columns to keep
 list_cols = ['icd10_code', 'title_en']
 icd10who_small = icd10who[list_cols]
@@ -19,13 +21,15 @@ icd10who_small['last_updated'] = '09-07-2025'
 
 # Rename columns
 icd10who_small = icd10who_small.rename(columns={
-    'icd10_code': 'code',
-    'title_en': 'description',
+    'icd10_code': 'Code',
+    'title_en': 'Description',
+    'last_updated': 'Last Updated'
 })
 
-output_path = 'output/csv/icd10who_small.csv'
-icd10who_small.to_csv(output_path, index=False)
+# Save cleaned dataset to csv
+save_to_formats(icd10who_small, 'icd10who_small')
 
+output_path = 'output/csv/icd10who_small.csv'
 print(f"Successfully parsed {len(icd10who)} records from {file_path}")
 print(f"Saved to {output_path}")
 print(f"\nFirst 5 rows:")

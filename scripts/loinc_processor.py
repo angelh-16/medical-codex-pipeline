@@ -1,5 +1,8 @@
 import pandas as pd 
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 # Load loinc csv file
 loinc = pd.read_csv('input/Loinc.csv')
 
@@ -31,6 +34,8 @@ loinc_small = loinc_small.rename(columns={
 })
 
 # Save cleaned dataset to csv
-file_output_path = 'output/csv/loinc_small.csv'
+save_to_formats(loinc_small, 'loinc_small')
 
-loinc_small.to_csv(file_output_path, index=False)
+# Save cleaned dataset to csv without using common function
+# file_output_path = 'output/csv/loinc_small.csv'
+# loinc_small.to_csv(file_output_path, index=False)
