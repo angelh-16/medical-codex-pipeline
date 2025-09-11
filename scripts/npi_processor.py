@@ -2,6 +2,9 @@ import polars as pl
 import pandas as pd
 import time
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 npi_file_path = 'input/npidata_pfile_20050523-20250810.csv'
 
 ## just load the first 1000 rows

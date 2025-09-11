@@ -1,7 +1,8 @@
 import polars as pl
 from pathlib import Path
 
-# https://www.nlm.nih.gov/research/umls/rxnorm/docs/techdoc.html#s12_10
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
 
 file_path = Path('input/RXNATOMARCHIVE.RRF')
 

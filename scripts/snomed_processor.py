@@ -1,6 +1,9 @@
 import polars as pl
 from pathlib import Path
 
+#import save_to_formats function from common_functions.py
+from utils.common_functions import save_to_formats
+
 file_path = Path('input/sct2_Description_Full-en_US1000124_20250301.txt')
 
 df = pl.read_csv(
