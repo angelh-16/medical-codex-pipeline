@@ -1,10 +1,10 @@
 import pandas as pd 
 import re
 
-# Define the file path
+# Path to the HCPCS text file
 file_path= 'input/icd10cm_order_2025.txt'
 
-# This initializes a blank list to hold the parsed codes (e.g., individual rows from the text file)
+# Initializes a blank list to hold the parsed codes
 codes = []
 
 with open(file_path, 'r', encoding='utf-8') as file:
@@ -42,6 +42,20 @@ with open(file_path, 'r', encoding='utf-8') as file:
 ## Create a DataFrame from the parsed codes
 icdcodes = pd.DataFrame(codes)
 
-## Save the DataFrame to a CSV file
-icdcodes.to_csv("output/icd10cm_small.csv", index=False)
+# Columns to keep
+list_cols = ['order_num', 'description_detailed']
+icdcodes_small = icdcodes[list_cols]
 
+# Add last updated columnn
+icdcodes_small['Last_Updated'] = '09-10-2025'
+
+# Rename columns
+icdcodes_small = icdcodes_small.rename(columns={
+    'order_num': 'Order Number',
+    'description_detailed': 'Description',
+    'Last_Updated': 'Last_Updated'
+})
+
+# Save cleaned dataset to csv
+output_path = "output/csv/icd10cm_small.csv"
+icdcodes.to_csv(output_path, index=False)

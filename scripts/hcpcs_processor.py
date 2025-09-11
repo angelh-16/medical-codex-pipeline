@@ -22,6 +22,6 @@ hcpcs_small = hcpcs[column_names]
 hcpcs_small['Last_Updated'] = '09-09-2025'
 
 # Save cleaned dataset to csv
-output_path = "output/HCPCS_small.csv"
+output_path = "output/csv/hcpcs_small.csv"
 
 hcpcs_small.to_csv(output_path, index=False)

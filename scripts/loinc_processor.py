@@ -31,6 +31,6 @@ loinc_small = loinc_small.rename(columns={
 })
 
 # Save cleaned dataset to csv
-file_output_path = 'output/loinc_small.csv'
+file_output_path = 'output/csv/loinc_small.csv'
 
 loinc_small.to_csv(file_output_path, index=False)

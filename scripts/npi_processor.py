@@ -26,7 +26,7 @@ print(f"\nDataset shape: {df_polars.shape}")
 print(f"\nFirst 5 rows:")
 print(df_polars.head())
 
-print(f"\nMemory usage (MB): {df.estimated_size() / 1024**2:.2f}")
+print(f"\nMemory usage (MB): {df_polars.estimated_size() / 1024**2:.2f}")
 
 
 df_polars_small = df_polars.select([
@@ -47,7 +47,7 @@ df_polars_small = df_polars_small.rename({
 })
 
 
-# save to csv
-output_path = 'output/npi_small.csv'
+## save to csv
+output_path = 'output/csv/npi_small.csv'
 df_polars_small.write_csv(output_path)
-df_polars_small.write_parquet('output/npi_small.parquet')
+df_polars_small.write_parquet('output/csv/npi_small.parquet')
