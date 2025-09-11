@@ -1,5 +1,5 @@
 HHA-507-2025: 
-Medical Codex Data Pipeline Assignment \
+Medical Codex Data Pipeline Assignment
 
 https://github.com/hantswilliams/HHA-507-2025/blob/main/assignments/assignment1_medicalcodexes.md
 
