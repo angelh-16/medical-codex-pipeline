@@ -1,7 +1,7 @@
 HHA-507-2025: 
 Medical Codex Data Pipeline Assignment \
 
-***NOTE: I tried to process logging in loinc_processor.py (Not sure if I'm doing it right)
+***NOTE: I tried to process logging in loinc_processor.py (not sure if I'm doing it right)
 
 https://github.com/hantswilliams/HHA-507-2025/blob/main/assignments/assignment1_medicalcodexes.md
 
