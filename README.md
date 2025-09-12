@@ -1,5 +1,5 @@
 HHA-507-2025: 
-Medical Codex Data Pipeline Assignment \
+Medical Codex Data Pipeline Assignment 
 
 ***NOTE: I tried to process logging in loinc_processor.py & hcpcs_processor (not sure if I'm doing it right)
 
