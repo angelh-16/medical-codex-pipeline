@@ -1,0 +1,23 @@
+2025-09-12 17:39:56,489 - INFO - Starting loinc cleaning script
+2025-09-12 17:39:58,336 - INFO - loinc file loaded successfully with 108248 rows and 40 columns
+2025-09-12 17:39:58,500 - INFO - loinc columns: ['LOINC_NUM', 'COMPONENT', 'PROPERTY', 'TIME_ASPCT', 'SYSTEM', 'SCALE_TYP', 'METHOD_TYP', 'CLASS', 'VersionLastChanged', 'CHNG_TYPE', 'DefinitionDescription', 'STATUS', 'CONSUMER_NAME', 'CLASSTYPE', 'FORMULA', 'EXMPL_ANSWERS', 'SURVEY_QUEST_TEXT', 'SURVEY_QUEST_SRC', 'UNITSREQUIRED', 'RELATEDNAMES2', 'SHORTNAME', 'ORDER_OBS', 'HL7_FIELD_SUBFIELD_ID', 'EXTERNAL_COPYRIGHT_NOTICE', 'EXAMPLE_UNITS', 'LONG_COMMON_NAME', 'EXAMPLE_UCUM_UNITS', 'STATUS_REASON', 'STATUS_TEXT', 'CHANGE_REASON_PUBLIC', 'COMMON_TEST_RANK', 'COMMON_ORDER_RANK', 'HL7_ATTACHMENT_STRUCTURE', 'EXTERNAL_COPYRIGHT_LINK', 'PanelType', 'AskAtOrderEntry', 'AssociatedObservations', 'VersionFirstReleased', 'ValidHL7AttachmentRequest', 'DisplayName']
+2025-09-12 17:39:58,515 - INFO - status value counts:
+STATUS
+ACTIVE         96241
+TRIAL           5460
+DEPRECATED      4957
+DISCOURAGED     1590
+Name: count, dtype: int64
+2025-09-12 17:39:58,541 - INFO - Selected columns: ['LOINC_NUM', 'LONG_COMMON_NAME']
+2025-09-12 17:39:58,548 - INFO - Added last_updated column
+2025-09-12 17:39:58,570 - INFO - Renamed columns to 'Code', 'Description' and 'Last Updated'
+2025-09-12 17:39:58,854 - INFO - loinc cleaned dataset saved successfully using save_to_formats
+2025-09-12 17:39:58,857 - INFO - loinc completed successfully
+2025-09-12 17:40:16,167 - INFO - Starting hcpcs cleaning script
+2025-09-12 17:40:16,532 - INFO - hcpcs file loaded successfully with 16006 rows and 8 columns
+2025-09-12 17:40:16,550 - INFO - hcpcs columns: ['Code', 'Description1', 'Description2', 'Type', 'Unknown1', 'Unknown2', 'Unknown3', 'Unknown4']
+2025-09-12 17:40:16,561 - INFO - Selected columns: ['Code', 'Description1', 'Description2', 'Type', 'Unknown1', 'Unknown2', 'Unknown3', 'Unknown4']
+2025-09-12 17:40:16,569 - INFO - Added last_updated column
+2025-09-12 17:40:16,589 - INFO - Renamed column to'Last Updated'
+2025-09-12 17:40:16,716 - INFO - hcpcs cleaned dataset saved successfully using save_to_formats
+2025-09-12 17:40:16,718 - INFO - hcpcs completed successfully

@@ -1,6 +1,6 @@
 import pandas as pd
 
-#import save_to_formats function from common_functions.py
+# Import save_to_formats function from common_functions.py
 from utils.common_functions import save_to_formats
 
 file_path = 'input/icd102019syst_codes.txt'
