@@ -8,6 +8,6 @@ def save_to_formats(df: pd.DataFrame, filename: str) -> None:
 
     # Define file paths
     output_path = output_dir / f'{filename}.csv'
-
+    
     # Save to CSV
     df.to_csv(output_path, index=False)
