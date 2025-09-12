@@ -22,7 +22,11 @@ hcpcs.info()
 hcpcs_small = hcpcs[column_names]
 
 # Add new column for last updated date
-hcpcs_small['Last_Updated'] = '09-09-2025'
+hcpcs_small['last_updated'] = '09-09-2025'
+# Rename columns
+hcpcs_small = hcpcs_small.rename(columns={
+    'last_updated': 'Last Updated',
+})
 
 # Save cleaned dataset to csv
 save_to_formats(hcpcs_small, 'hcpcs_small')

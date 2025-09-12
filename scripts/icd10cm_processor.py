@@ -43,21 +43,23 @@ with open(file_path, 'r', encoding='utf-8') as file:
         })
 
 ## Create a DataFrame from the parsed codes
-icdcodes = pd.DataFrame(codes)
+icd10us = pd.DataFrame(codes)
 
 # Columns to keep
-list_cols = ['order_num', 'description_detailed']
-icdcodes_small = icdcodes[list_cols]
+list_cols = ['code', 'description_detailed']
+icd10us_small = icd10us[list_cols]
 
 # Add last updated columnn
-icdcodes_small['last_updated'] = '09-10-2025'
+icd10us_small['last_updated'] = '09-10-2025'
 
 # Rename columns
-icdcodes_small = icdcodes_small.rename(columns={
-    'order_num': 'Order Number',
+icd10us_small = icd10us_small.rename(columns={
+    'code': 'Code',
     'description_detailed': 'Description',
     'last_updated': 'Last Updated'
 })
 
+print(icd10us_small)
+
 # Save cleaned dataset to csv
-save_to_formats(icdcodes_small, 'icdcodes_small')
+save_to_formats(icd10us_small, 'icd10us_small')

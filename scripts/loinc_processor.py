@@ -29,8 +29,8 @@ loinc_small['last_updated'] = '09-07-2025'
 
 # Rename columns
 loinc_small = loinc_small.rename(columns={
-    'LOINC_NUM': 'code',
-    'LONG_COMMON_NAME': 'description',
+    'LOINC_NUM': 'Code',
+    'LONG_COMMON_NAME': 'Description',
 })
 
 # Save cleaned dataset to csv
