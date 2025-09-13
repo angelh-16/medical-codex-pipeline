@@ -11,7 +11,7 @@ You are a data scientist at a healthcare software company. Your team maintains u
 ### Assignment Overview:
 Create Python scripts that can process each medical codex listed below into standardized CSV format. Your pipeline should handle data cleaning, validation, and format conversion for production use.
 
-### Target Medical Codexe:
+### Target Medical Codex:
 SNOMED CT (US) - Clinical terminology \
 ICD-10-CM (US) - Diagnosis codes \
 ICD-10 (WHO) - International diagnosis codes \
